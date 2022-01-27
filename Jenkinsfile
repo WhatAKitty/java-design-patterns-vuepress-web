@@ -10,7 +10,8 @@ pipeline {
     stage('test') {
       steps {
         sh 'echo "start to build"'
-        sh 'node -v'
+        sh 'echo $PATH'
+        sh 'node --version'
         sh 'sh build.sh'
       }
     }
